@@ -10,6 +10,7 @@ on:
 
 jobs:
   buildMac:
+    if: false
     name: Build macOS
     runs-on: macos-11
     strategy:
@@ -38,6 +39,7 @@ jobs:
           path: build/dist/DLTViewer*.tgz
 
   buildLinux:
+    if: false
     name: Build ${{ matrix.ubuntu }}
     strategy:
       matrix:
@@ -76,14 +78,13 @@ jobs:
           submodules: true
       - name: Install qt
         uses: jurplel/install-qt-action@v2
-        with:
-          version: 5.12.12
       - name: Build with CMake ${{ matrix.task }}
         run: >
           $env:WORKSPACE=$env:GITHUB_WORKSPACE;
           $env:QTDIR=$env:Qt5_DIR.Replace('/','\');
           $env:CPACK_7Z="true";
           $env:CPACK_NSIS="true";
+          $env:CXXFLAGS="-GL -Gw";
           ./build_sdk_windows_qt5_MSVC_cmake.bat
       - name: Archive artifact
         uses: actions/upload-artifact@v3
