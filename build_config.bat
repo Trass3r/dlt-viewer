@@ -39,7 +39,7 @@ if "%QTDIR%"=="" (
 if "%QWT%"=="" (
     set QWT=6.1.4
 REM    set QWT=6.1.6
-REM    set QWT=6.2.0
+    set QWT=6.2.0
 )
 
 set PATH=%QTDIR%\bin;%MSVC_DIR%;%PATH%
