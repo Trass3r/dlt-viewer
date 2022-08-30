@@ -59,7 +59,7 @@ echo ************************************
 echo ***  Configure MSVC environment  ***
 echo ************************************
 
-call vcvarsall.bat x86_amd64
+call vcvars64.bat
 if %ERRORLEVEL% NEQ 0 goto ERROR_HANDLER
 echo configuring was successful
 
