@@ -10,8 +10,9 @@ REM 5.15.2 msvc2015,msvc2019
 REM 6.2.2 msvc2019
 
 if "%QTVER%"=="" (
-REM    set QTVER=5.15.2
-    set QTVER=6.2.4
+REM    set QTVER=5.12.12
+    set QTVER=5.15.2
+REM    set QTVER=6.2.2
 )
 
 if "%MSVC_VER%"=="" (
