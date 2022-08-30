@@ -18,7 +18,7 @@ REM    set QTVER=6.2.2
 if "%MSVC_VER%"=="" (
 REM    set MSVC_VER=2015
 REM    set MSVC_VER=2017
-    set MSVC_VER=2019
+    set MSVC_VER=2022
 )
 
 if "%MSVC_VER%"=="2015" (
@@ -33,7 +33,7 @@ if "%MSVC_VER%"=="2015" (
 
 echo Set QT directory for %QTVER% and %MSVC_VER%
 if "%QTDIR%"=="" (
-    set QTDIR=C:\Qt\%QTVER%\msvc%MSVC_VER%_64
+    set QTDIR=C:\Qt\%QTVER%\msvc2019_64
 )
 
 if "%QWT%"=="" (

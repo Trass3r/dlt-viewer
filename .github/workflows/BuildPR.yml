@@ -69,7 +69,7 @@ jobs:
     strategy:
       matrix:
         task: [sdk]
-    runs-on: windows-2019
+    runs-on: windows-2022
     steps:
       - name: Checkout
         uses: actions/checkout@v3
